@@ -18,6 +18,12 @@ public class VistaCuidador extends javax.swing.JFrame {
      */
     public VistaCuidador() {
         initComponents();
+        
+        this.setTitle("Cuidador");
+        
+        // Para ajustar la ventana en el médio
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
