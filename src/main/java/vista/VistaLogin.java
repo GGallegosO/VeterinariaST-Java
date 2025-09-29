@@ -19,6 +19,7 @@ public class VistaLogin extends javax.swing.JFrame {
         this.setTitle("Veterinaria");
         
         
+        
     }
 
     /**
