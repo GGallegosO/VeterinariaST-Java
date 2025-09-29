@@ -17,6 +17,9 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         initComponents();
         
         this.setTitle("Menú Principal");
+        
+         // Para ajustar la ventana en el médio
+        this.setLocationRelativeTo(null);
     }
 
     /**
