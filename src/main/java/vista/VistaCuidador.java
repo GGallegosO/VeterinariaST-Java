@@ -18,6 +18,7 @@ public class VistaCuidador extends javax.swing.JFrame {
      */
     public VistaCuidador() {
         initComponents();
+        
     }
 
     /**
