@@ -38,23 +38,28 @@ public class VistaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblPass = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
         lblContrasenia = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         btnAcceder = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
-        txtPass = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblPass.setText("Contraseña");
+        lblPassword.setText("Contraseña");
 
-        lblContrasenia.setText("RUN");
+        lblContrasenia.setText("Nombre");
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
+            }
+        });
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
             }
         });
 
@@ -81,7 +86,7 @@ public class VistaLogin extends javax.swing.JFrame {
             }
         });
 
-        txtPass.setText("jPasswordField1");
+        txtPassword.setText("jPasswordField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,11 +108,11 @@ public class VistaLogin extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblContrasenia)
-                            .addComponent(lblPass))
+                            .addComponent(lblPassword))
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNombre)
-                            .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22))))
         );
         layout.setVerticalGroup(
@@ -121,8 +126,8 @@ public class VistaLogin extends javax.swing.JFrame {
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPass)
-                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPassword)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
                 .addComponent(btnAcceder)
                 .addGap(64, 64, 64)
@@ -153,6 +158,25 @@ public class VistaLogin extends javax.swing.JFrame {
         //cerrar programa
         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        // TODO add your handling code here:
+        if(txtNombre.getText().length() == 10){
+            evt.consume(); //no deja seguir escribiendo
+        }
+        
+        System.out.println(evt.getKeyChar());
+        // solo numeros
+        char c = evt.getKeyChar();
+        
+        
+        //solo digitos
+        //solo numeros !Character.isDigit(c)
+        if (Character.isDigit(c) && c != evt.VK_BACK_SPACE) {
+            evt.consume(); 
+        }
+        
+    }//GEN-LAST:event_txtNombreKeyTyped
 
     /**
      * @param args the command line arguments
@@ -193,9 +217,9 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JButton btnAcceder;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel lblContrasenia;
-    private javax.swing.JLabel lblPass;
+    private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }
