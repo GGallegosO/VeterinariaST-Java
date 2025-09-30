@@ -20,6 +20,9 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         
          // Para ajustar la ventana en el médio
         this.setLocationRelativeTo(null);
+        
+        
+        
     }
 
     /**
@@ -31,21 +34,66 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnTestIn = new javax.swing.JButton();
+        btnTestSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnTestIn.setBackground(new java.awt.Color(175, 175, 217));
+        btnTestIn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnTestIn.setText("Test Entrar");
+        btnTestIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTestInActionPerformed(evt);
+            }
+        });
+
+        btnTestSalir.setBackground(new java.awt.Color(255, 0, 51));
+        btnTestSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnTestSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnTestSalir.setText("Test Salir");
+        btnTestSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTestSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(btnTestIn)
+                .addContainerGap(161, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnTestSalir)
+                .addGap(40, 40, 40))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(175, Short.MAX_VALUE)
+                .addComponent(btnTestIn)
+                .addGap(46, 46, 46)
+                .addComponent(btnTestSalir)
+                .addGap(33, 33, 33))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTestInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestInActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTestInActionPerformed
+
+    private void btnTestSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestSalirActionPerformed
+        // TODO add your handling code here:
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_btnTestSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,5 +131,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnTestIn;
+    private javax.swing.JButton btnTestSalir;
     // End of variables declaration//GEN-END:variables
 }
